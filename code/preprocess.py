@@ -1,7 +1,11 @@
 import numpy as np
 import pandas as pd
 
-def preprocess_df(train):    
+def preprocess_df(train, clust_to_num):
+    '''
+    train : train dataframe
+    clust_to_num : dict containing cluster as a key, according buildings as values
+    '''    
     # outlier processing
     train['datetime'] = pd.to_datetime(train['datetime'])
     idx = train[(train.num == 31)&(train.target < 3000)].index[0]
@@ -302,7 +306,13 @@ def preprocess_df(train):
 
 
 # data preprocessing function for testset
-def test_preprocess(test, means, stds):
+def test_preprocess(test, clust_to_num, means, stds):
+    '''
+    train : test dataframe
+    clust_to_num : dict containing cluster as a key, according buildings as values
+    means : list containing np.mean(train, axis = 0) of every 60 buildings
+    stds : list containing np.std(train, axis = 0) of every 60 buildings
+    '''
     X_train = test.copy()
     X_train = X_train.interpolate()
     
