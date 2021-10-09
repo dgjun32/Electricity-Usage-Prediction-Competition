@@ -1,2 +1,3 @@
-data/*
-model/*
+data/train_df.csv
+data/test_df.csv
+data/submission_df.csv
