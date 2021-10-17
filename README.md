@@ -40,11 +40,11 @@ def good_models(score_df, pivot_q, threshold):
 By using ```good_models``` function with parameter ```pivot_q = 0.3``` and ```threshold = 1.1```, I selected models for ensemble in each building.
 
 ## 2. Data
-Download .csv files in this link and save it as ```train.csv```, ```test.csv```, ```submission.csv``` at ```../data/```.
+Download csv files in this <href src = 'https://dacon.io/competitions/official/235736/data'>link</href> and save it as ```train.csv```, ```test.csv```, ```submission.csv``` at ```../data/```.
 
 ## 3. Training
-```python main.py```
+command ```python main.py```
 
-This will train models and save trained models in ```../model/```.
+Models will be trained and saved in ```../model/```.
 
 ## 4. Evaluation
