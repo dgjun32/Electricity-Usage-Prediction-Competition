@@ -5,13 +5,13 @@
 ### 1.1. Summary of EDA
 According to Exploratory Data Analysis, which you can check in my notebook file in this repository, Each 60 buildings have distinguishing behavior of electricity consumption pattern. 
 
-<img src = '../figures/heatmap.png'>
+<img src = 'figures/heatmap.png'>
 
 Therefore, I determined to <b>apply seperate feature engineering</b> and <b>train seperate model</b> for each  60 buildings. 
 
 Also, I conducted K-means clustering on electricity usage pattern of each buildings. I assigned cluster from 0 to 3, which buildings in the same cluster share similar electricity usage pattern. I applied same feature engineering to buildings within same cluster. Below is the result of clustering.
 
-<img src = '../figures/heatmap_cluster.png'>
+<img src = 'figures/heatmap_cluster.png'>
 
 ### 1.2. Model Ensembling Strategy
 
@@ -20,7 +20,7 @@ I initially computed 8 fold CV score of five models ```CatBoostRegressor``` ```L
 
 However, according to CV scores, some models perform well on certain buildings but not on other buildings. Below is the visualization of CV scores.
 
-<img src = '../figures/cv_scores.png'>
+<img src = 'figures/cv_scores.png'>
 
 Therefore, I implemented function for selecting 'good models for each building' based on CV score.
 
